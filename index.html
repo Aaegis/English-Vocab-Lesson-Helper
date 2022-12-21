@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vocab Lesson Helper</title>
+    </head>
+    <body>
+        <h1>Vocabulary Lesson Helper</h1>
+        <h4>Current lesson: 10-12<br>Kenny Vu</h4>
+        <p><br>This is a tool to help you memorize the vocabulary words for Mr. Madden's English class.<br>
+            Click the button below to generate the current vocabulary words in a random order.<br>Please note that
+            this tool does not update automatically, and will need some time to be updated to the current lesson.</p>
+        <h3>These are currently the rhetorical devices words.</h3>
+        <button id="generateButton">Generate!</button>
+        <textarea id="wordTextArea" name="wordTextArea" rows="31" cols="200">
+            Alliteration
+            Allusion
+            Amplification
+            Analogy
+            Anaphora
+            Antanagoge
+            Antimetabole
+            Antiphrasis
+            Appositive
+            Enumeratio
+            Epanalepsis
+            Epithet
+            Epizeuxis
+            Hyperbole
+            Litotes
+            Metanoia
+            Metaphor
+            Metonymy
+            Onomatopoeia
+            Oxymoron
+            Parallelism
+            Simile
+        </textarea>
+        <script>
+            let vocabWords = [ // Put vocab words here
+                "Alliteration", "Allusion", "Amplification", "Analogy", "Anaphora",
+                "Antanagoge", "Antimetabole", "Antiphrasis", "Appositive", "Enumeratio",
+                "Epanalepsis", "Epithet", "Epizeuxis", "Hyperbole", "Litotes",
+                "Metanoia", "Metaphor", "Metonymy", "Onomatopoeia", "Oxymoron",
+                "Parallelism", "Simile"
+            ];
+
+            /*
+            The code in between this multi-line comment and the one below was found on a StackOverflow post by coolaj86. Big thanks!
+            */
+
+            document.getElementById('generateButton').onclick = function() {
+                function shuffle(array) {
+                let currentIndex = array.length,  randomIndex;
+
+                // While there remain elements to shuffle.
+                while (currentIndex != 0) {
+
+                    // Pick a remaining element.
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+
+                    // And swap it with the current element.
+                    [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+                }
+
+                return array;
+                }
+
+            shuffle(vocabWords);
+            console.log(vocabWords);
+            /*
+            The code in between this multi-line comment and the one above was found on a StackOverflow post by coolaj86. Big thanks!
+            */
+
+            document.getElementById('wordTextArea').innerHTML = vocabWords.join("\r\n");
+            }
+        </script>
+        <h2>How you should use this:</h2>
+        <p>Copy the above text into a text editor, such as Google Docs,<br>
+        Notepad, Notepad++, or more. Then, write down their definitions<br>
+        next to the words in order to help you memorize them.
+        </p>
+    </body>
+</html>
