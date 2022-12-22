@@ -17,3 +17,8 @@ coolaj86's profile (StackOverflow): https://stackoverflow.com/users/151312/coola
 Big thanks to him!
 
 View my website: https://aaegis.github.io/English-Vocab-Lesson-Helper/
+
+
+This is one of my first ever posts on github (previous posts were deleted as they were low value "Hello World!" programs and such)
+I'm glad to be able to see what a career in Web Development is like, and I'm so glad that I am able to learn this way.
+Please see what is in toDoList.txt before posting an issue! Many thanks!
