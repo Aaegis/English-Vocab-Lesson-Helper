@@ -1,6 +1,6 @@
 // 'shuffle' is defined from an external library. See the HTML file to see where it's loaded.
 
-const vocabWords = [ // Put vocab words here
+const vocabWords = [
     "Alliteration", "Allusion", "Amplification", "Analogy", "Anaphora",
     "Antanagoge", "Antimetabole", "Antiphrasis", "Appositive", "Enumeratio",
     "Epanalepsis", "Epithet", "Epizeuxis", "Hyperbole", "Litotes",
@@ -8,10 +8,17 @@ const vocabWords = [ // Put vocab words here
     "Parallelism", "Simile"
 ];
 
-const button = () => document.getElementById('generateButton');
+const button = () => document.getElementById("generateButton");
+const cpButton = () => document.getElementById("copyButton");
+const wordArea = () => document.getElementById("wordTextarea");
 
-const wordArea = () => document.getElementById('generateButton');
+const copy = () => navigator.clipboard.writeText(wordArea().value);
 
 const update = function () {
-    wordArea().value = shuffle(vocabWords);
-}
+    wordArea().innerHTML = shuffle(vocabWords).join(" \n");
+};
+
+
+document.addEventListener("DOMContentLoaded", update);
+button().onclick = update;
+cpButton().onclick = copy;
