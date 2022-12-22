@@ -8,8 +8,6 @@ What the website does:
 It contains a button that when pressed, will output the current vocabulary words (must be manually updated) in a random order. This text can be copied and pasted
 into a text editor such as Google Docs, Notepad, Notepad++, etc.
 
-Big thanks to him!
-
 View my website: https://aaegis.github.io/English-Vocab-Lesson-Helper/
 
 
